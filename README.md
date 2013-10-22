@@ -1,6 +1,6 @@
 # Sogou
 
-TODO: Write a gem description
+Sogou SEM Services
 
 ## Installation
 
@@ -16,9 +16,38 @@ Or install it yourself as:
 
     $ gem install sogou
 
+## Knowledge
+camel命名法，用于request数据格式
+snake命名法，用于response数据格式
+
+## Rspec
+先修改spec/spec_helper.rb
+
+```ruby
+
+$username = ''
+$password = ''
+$token = ''
+
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+SEM
+
+```ruby
+require 'sogou'
+
+auth = Sogou::Auth.new
+auth.username = 'username'
+auth.password = 'password'
+auth.token = 'token'
+
+ss = Sogou::SEM::SearchService.new(auth)
+res = ss.getAccountInfo({})
+res = ss.getAccountInfo({},true) #debug=true
+```
+
 
 ## Contributing
 
