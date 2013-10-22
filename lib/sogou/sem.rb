@@ -1,0 +1,8 @@
+require 'sogou/sem/base'
+require 'sogou/sem/account'
+require 'sogou/sem/campaign'
+require 'sogou/sem/adgroup'
+require 'sogou/sem/keyword'
+require 'sogou/sem/creative'
+require 'sogou/sem/enum'
+require 'sogou/sem/report'
