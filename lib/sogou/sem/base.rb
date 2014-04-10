@@ -54,12 +54,12 @@ module Sogou
         puts operation.build if debug
         response = operation.call
         ap response if debug
-        # ap response.failures if debug
-        if response.failures
-          raise response.failures.to_s
-        else
+        ap response.failures if debug
+        # if response.failures
+        #   raise response.failures.to_s
+        # else
           Sogou::Response.new(response,name_response_sym)
-        end
+        # end
       end
       def operations
         @client.operations(@service_name,@port_name)
