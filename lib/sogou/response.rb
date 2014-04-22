@@ -8,6 +8,7 @@ module Sogou
       @quota = @header[:quota].to_i
       @status = @header[:status].to_i
       @desc = @header[:desc]
+      @failures = @header[:failures]
       @oprs = @header[:oprs]
       @oprtime = @header[:oprtime]
     end
